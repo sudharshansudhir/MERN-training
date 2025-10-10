@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Game-1</title>
+    <style>
+        body{
+            background-color: rgb(195, 226, 198);
+            display: flex;
+            width: 98%;
+            padding: 2px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title{
+            color: brown;
+            background-color:powderblue;
+            width:96%;
+            margin: 5px;
+            border: 2px solid black;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .container{
+            width:fit-content;
+            padding: 5px;
+        }
+
+        .outer{
+            width: 800px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50vh;
+        }
+
+        button{
+            border: 3px solid red;
+            border-radius: 20px;
+            color:brown;
+            font-weight: 900;
+
+            text-align: center;
+            font-size: 26px;
+            background-color: burlywood;
+            height: 200px;
+            width: 200px;
+        }
+
+        .ans{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .choice{
+            width: 200px;
+            height: fit-content;
+            background-color: rgb(83, 168, 80);
+            color: brown;
+            border: 4px solid brown;
+            border-radius: 10px;
+            padding: 10px 20px;
+        }
+
+        .spans{
+            color: black;
+            font-size: 30px;
+        }
+
+        .result{
+            color: black;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        
+        .answer{
+            width: 400px;
+            height: fit-content;
+            background-color: wheat;
+            color: brown;
+            border: 4px solid brown;
+            border-radius: 10px;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        
+        .res{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <h1 class="title">Rock Paper Scissors</h1>
+    <div class="container">
+    <div class="outer">
+        <button onclick="onclicks('Rock')">Rock🪨</button>
+        <button onclick="onclicks('Paper')">Paper📄</button>
+        <button onclick="onclicks('Scissors')">Scissors✂️</button>
+    </div>    
+    <div class="ans">
+        <h1 class="choice">Your Choice: <span class="player_update spans"></span></h1>
+        <h1 class="choice">Computer Choice: <span class="computer_update spans"></span></h1>
+    </div>
+    <div class="res">
+    <h1 class="answer">Result: <span class="result"></span></h1>
+    </div>
+
+    </div>
+    <script>
+        function onclicks(x){
+            let rand=Math.floor(Math.random()*3);
+            let choices=["Rock","Paper","Scissors"];
+            // console.log(choices[rand]);
+            // console.log(rand);            
+            // console.log(x);
+            let player=document.getElementsByClassName("player_update")[0]
+            let computer=document.getElementsByClassName("computer_update")[0]
+            player.innerHTML=`${x}`
+            computer.innerHTML=`${choices[rand]}`
+            let result=document.getElementsByClassName("result")[0]
+            if(choices[rand]==x){
+                result.innerHTML="Match Draw"
+            }
+            else if(choices[rand]=="Rock" && x=="Scissors"){
+                result.innerHTML="You Loss☹️"
+            }
+            else if(choices[rand]=="Scissors" && x=="Paper"){
+                result.innerHTML="You Loss☹️"
+            }            
+            else if(choices[rand]=="Paper" && x=="Rock"){
+                result.innerHTML="You Loss☹️"
+            }
+
+            else if(choices[rand]=="Rock" && x=="Paper"){
+                result.innerHTML="You Win🥳"
+            }
+            else if(choices[rand]=="Scissors" && x=="Rock"){
+                result.innerHTML="You Win🥳"
+            }       
+            else if(choices[rand]=="Paper" && x=="Scissors"){
+                result.innerHTML="You Win🥳"
+            }                
+            
+        }
+        
+    </script>
+</body>
+</html>
