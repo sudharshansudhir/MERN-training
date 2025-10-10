@@ -34,8 +34,36 @@
 // obj2.x=20;
 // console.log(obj1.x);
 // console.log(obj2.x);
-a=10;
-b=20;
-if (!(a==b)){
-    console.log("not equal")
+// a=10;
+// b=20;
+// if (!(a==b)){
+//     console.log("not equal")
+// }
+
+// console.log(9&5)
+// console.log(9|5)
+// console.log(9^5)
+// console.log(~9) //find 2's complement and add negative sign
+// console.log(9<<2)
+// console.log(9>>2)
+// console.log(9>>>2) //no negative signn 
+
+
+function add(x,y){
+    return x+y;
+}   
+
+console.log(add(5,10));
+
+
+function add2(x,y){
+    console.log(x+y);
 }
+add2(5,10);
+
+// Arrow function
+
+const add3 = (x,y)=>{
+    console.log(x+y);
+}   
+add3(5,10);
