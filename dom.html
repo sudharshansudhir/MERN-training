@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dom.css">
+</head>
+<body>
+    <div class="outer">
+    <h1 id="change">Click to Zoom</h1>
+    <button onclick="changetext()">🌚</button>
+    </div>
+    <script>
+        function changetext(){
+            document.getElementById("change").innerHTML="Button Clicked!";
+            let body=document.getElementsByClassName("outer")[0];
+            body.style.transform="scale(1.5)";
+            body.style.transition="transform 0.5s ease";
+        }
+    </script>
+</body>
+</html>
