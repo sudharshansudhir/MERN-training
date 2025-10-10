@@ -29,8 +29,13 @@
 // console.log(add2(5));
 // console.log(add2());
 // console.log(add2(5,10,15,20));
-let obj1={x:10};
-let obj2=obj1;
-obj2.x=20;
-console.log(obj1.x);
-console.log(obj2.x);
+// let obj1={x:10};
+// let obj2=obj1;
+// obj2.x=20;
+// console.log(obj1.x);
+// console.log(obj2.x);
+a=10;
+b=20;
+if (!(a==b)){
+    console.log("not equal")
+}
