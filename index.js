@@ -67,3 +67,9 @@ const add3 = (x,y)=>{
     console.log(x+y);
 }   
 add3(5,10);
+
+const add4=(x,y,z)=>{
+    return x+y+z;
+}
+
+console.log(add4(5,10,15));
