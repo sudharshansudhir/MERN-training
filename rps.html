@@ -9,7 +9,6 @@
         body{
             background-color: rgb(195, 226, 198);
             display: flex;
-            padding: 2px;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -18,7 +17,7 @@
         .title{
             color: brown;
             background-color:powderblue;
-            margin: 5px;
+            /* margin: 5px; */
             border: 2px solid black;
             padding: 10px 20px;
             border-radius: 10px;
@@ -26,15 +25,12 @@
             font-size: 40px;
         }
 
-        .container{
-            width:fit-content;
-            padding: 5px;
-        }
+        
 
         .outer{
-            width: 800px;
             display: flex;
-            justify-content: space-around;
+            /* gap:10px; */
+            justify-content: center;
             align-items: center;
             height: 50vh;
         }
@@ -44,12 +40,13 @@
             border-radius: 20px;
             color:brown;
             font-weight: 900;
-
+            padding: 20px 40px;
+            margin:10px;
             text-align: center;
             font-size: 26px;
             background-color: burlywood;
             height: 200px;
-            width: 200px;
+            width: fit-content;
         }
 
         .ans{
@@ -58,7 +55,7 @@
         }
 
         .choice{
-            width: 200px;
+            width: fit-content;
             height: fit-content;
             background-color: rgb(83, 168, 80);
             color: brown;
@@ -79,7 +76,7 @@
         }
         
         .answer{
-            width: 400px;
+            width: fit-content;            
             height: fit-content;
             background-color: wheat;
             color: brown;
@@ -115,18 +112,18 @@
     
     <h1 class="title">Rock Paper Scissors</h1>
     <div class="container">
-    <div class="outer">
-        <button onclick="onclicks('Rock')">Rock🪨</button>
-        <button onclick="onclicks('Paper')">Paper📄</button>
-        <button onclick="onclicks('Scissors')">Scissors✂️</button>
-    </div>    
-    <div class="ans">
-        <h1 class="choice">Your Choice: <span class="player_update spans"></span></h1>
-        <h1 class="choice">Computer Choice: <span class="computer_update spans"></span></h1>
-    </div>
-    <div class="res">
-    <h1 class="answer">Result: <span class="result"></span></h1>
-    </div>
+        <div class="outer">
+            <button onclick="onclicks('Rock')">Rock🪨</button>
+            <button onclick="onclicks('Paper')">Paper📄</button>
+            <button onclick="onclicks('Scissors')">Scissors✂️</button>
+        </div>    
+        <div class="ans">
+            <h1 class="choice">Your Choice: <span class="player_update spans"></span></h1>
+            <h1 class="choice">Computer Choice: <span class="computer_update spans"></span></h1>
+        </div>
+        <div class="res">
+            <h1 class="answer">Result: <span class="result"></span></h1>
+        </div>
 
     </div>
     <script>
