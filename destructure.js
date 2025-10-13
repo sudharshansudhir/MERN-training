@@ -16,3 +16,19 @@ let obj1={x:5,y:10,z:19}
 let obj2={x:15,y:20}
 let c={...obj1,...obj2} //spread operator in objects
 console.log(c) // Output: { x: 15, y: 20 } (obj2 properties overwrite obj1)
+let obj3=
+    [
+        {
+        name:"AAA",
+        age:20,
+        },
+        {
+        name:"BBB",
+        age:20,
+        },
+        {
+        name:"CCC",
+        age:20,
+        },
+    ]
+console.log(obj3)
