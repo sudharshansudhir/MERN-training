@@ -33,7 +33,7 @@ exports.login=async(req,res)=>{
         const token=jwt.sign({id:isUserExist._id},process.env.SECRET_KEY,{expiresIn:"1d"})
         res.status(200).send({message:"Logged In successfully",token})
 
-    }
+    } 
     catch(e){
         res.status(500).send(e)
     }
