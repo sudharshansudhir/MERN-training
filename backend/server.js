@@ -3,6 +3,7 @@ const app=express()
 const mongoose=require('mongoose')
 const dotenv=require('dotenv')
 dotenv.config()
+app.use(cors())
 
 const register=require('./routes/AuthRoutes')
 const task=require("./routes/TaskRoutes")
