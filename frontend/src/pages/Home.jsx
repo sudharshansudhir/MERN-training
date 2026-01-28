@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import State from "../hooks/State"
-
+import { userContext } from '../App'
 const Home = () => {
-  
-  return (
+  const [dummy,setDummy]=useState(0)
+  const name="kkk"
+    return (
     <div>
-      <State/>
+      <userContext.Provider value={[dummy,setDummy,name]}>
+        <State/>
+      </userContext.Provider>
+      {/* <State/> */}
     </div>
   )
 }

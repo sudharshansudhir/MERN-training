@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext } from 'react'
 import Profile from './components/Profile'
 import State from './hooks/State'
 import Parent from './components/Parent'
@@ -11,6 +11,9 @@ import Contact from './pages/Contact'
 import Product from './components/Product'
 import OneUser from './components/OneUser'
 import Reducer from './hooks/Reducer'
+
+export const userContext=createContext()
+
 
 const App = () => {
   return (<>
