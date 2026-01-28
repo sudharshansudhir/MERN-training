@@ -1,0 +1,34 @@
+.users{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.user-card{
+    display: flex;
+    width: 800px;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.user-card p{
+    text-align: left;
+}
+.user-card-title{
+    display: flex;
+    width: 800px;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: rgb(183, 182, 182);
+
+}
