@@ -4,7 +4,7 @@ const { getStudent, updateStudent, deleteStudent } = require('../controllers/Stu
 
 const router=express.Router()
 
-router.get("/:id",isStudent,getStudent)
+router.get("/:id",getStudent)
 router.patch("/:id",isStudent,updateStudent)
 router.delete("/:id",isStudent,deleteStudent)
 

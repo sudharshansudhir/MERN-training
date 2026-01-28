@@ -3,6 +3,7 @@ const app=express()
 const mongoose=require('mongoose')
 const dotenv=require('dotenv')
 dotenv.config()
+const cors=require('cors')
 app.use(cors())
 
 const register=require('./routes/AuthRoutes')
@@ -21,7 +22,7 @@ mongoose.connect(process.env.MONGO_URI)
 app.use("/user",register)
 app.use("/task",task)
 app.get("/",(req,res)=>{
-    res.send("Hello From Server 1")
+    res.send({message:"Hello From Server 1"})
 })
 
 
@@ -29,3 +30,4 @@ app.get("/",(req,res)=>{
 app.listen(7000,()=>{
     console.log("Server Running at port 7000")
 })  
+

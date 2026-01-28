@@ -38,3 +38,14 @@ exports.login=async(req,res)=>{
         res.status(500).send(e)
     }
 }
+
+
+exports.getAll=async(req,res)=>{
+    try{
+        const user=await User.find()
+        return res.status(200).send(user)
+    }
+    catch(e){
+        console.log(e)
+    }
+}

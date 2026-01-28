@@ -8,7 +8,12 @@ exports.getStudent=async(req,res)=>{
         if(!getUser){
             return res.status(400).send({message:"User does not exist in DataBase"})
         }
-        return res.status(200).send({getUser,message:"User Retrieved Successfully"})
+        const studentData=await Student.findOne({user:id})
+        if(!studentData){
+            return res.status(200).send({getUser,message:"User fetched successfully,but no student data exist"})
+        }
+
+        return res.status(200).send({getUser,studentData,message:"User Retrieved Successfully"})
 
     }
     catch(e){
